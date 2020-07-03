@@ -8,9 +8,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.java.guestVo.GuestVo;
 
-
+@Repository
 public class GuestDao {
 	Connection conn = null;
 	PreparedStatement pstmt = null;

@@ -4,9 +4,7 @@
         <wb-resource deploy-path="/" source-path="/webContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <dependent-module archiveName="ojdbc6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/oraclexe/app/oracle/product/11.2.0/server/jdbc/lib/ojdbc6.jar">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
         <property name="context-root" value="guestBook3"/>
         <property name="java-output-path" value="/guestBook3/build/classes"/>
     </wb-module>
