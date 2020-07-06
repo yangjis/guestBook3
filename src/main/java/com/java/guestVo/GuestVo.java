@@ -2,7 +2,6 @@ package com.java.guestVo;
 
 import org.springframework.stereotype.Repository;
 
-@Repository
 public class GuestVo {
 	private int no;
 	private String name;
