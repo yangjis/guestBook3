@@ -1,4 +1,4 @@
-package com.java.guestVo;
+package com.javaex.vo;
 
 import org.springframework.stereotype.Repository;
 

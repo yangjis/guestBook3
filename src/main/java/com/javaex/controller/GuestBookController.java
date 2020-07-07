@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.java.guestVo.GuestVo;
 import com.javaex.dao.GuestDao;
+import com.javaex.vo.GuestVo;
 
 @Controller
 @RequestMapping("/guest")
@@ -21,9 +21,9 @@ public class GuestBookController {
 	
 	@RequestMapping("/main")
 	public String main(Model model) {
+		System.out.println("main");
 		
 		List<GuestVo> gList = dao.getList();
-		System.out.println(gList.toString());
 		model.addAttribute("gList", gList);
 		
 		return "addList";
@@ -38,7 +38,6 @@ public class GuestBookController {
 	@RequestMapping("/delete")
 	public String delete(@RequestParam("no") int no,
 						 @RequestParam("pass") String inputNum) {
-		
 		dao.delete(no, inputNum);
 		return "redirect:/guest/main";
 	}
@@ -50,8 +49,8 @@ public class GuestBookController {
 		return "redirect:/guest/main";
 	}
 	
-	@RequestMapping("/test")
+	/*@RequestMapping("/test")
 	public String test() {
 		return "test";
-	}
+	}*/
 }
