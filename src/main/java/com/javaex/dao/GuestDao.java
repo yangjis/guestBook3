@@ -18,16 +18,12 @@ public class GuestDao {
 	@Autowired
 	private SqlSession sqlSession;
 	
-
 	public List<GuestVo> getList() {
 		List<GuestVo> personList = new ArrayList<GuestVo>();
 
 		personList = sqlSession.selectList("guestbook.getList");
 		return personList;
-
 	}
-	
-	
 	
 	public int addList(GuestVo gVo) {
 		
@@ -44,7 +40,6 @@ public class GuestDao {
 		int count = sqlSession.delete("guestbook.delete",delMap);
 
 		return count;
-		
 	}
 
 }
